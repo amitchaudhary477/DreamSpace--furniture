@@ -1,0 +1,665 @@
+# DreamSpace-website
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ========================================== -->
+    <!-- ADVANCED SEO & META TAGS                   -->
+    <!-- ========================================== -->
+    <title>Custom Furniture & Modular Kitchens in Mumbai | DreamSpace</title>
+    <meta name="description" content="Get premium, space-saving custom furniture for your Mumbai apartment. Real carpentry, termite-proof marine ply, and on-time delivery. Book a free consultation!">
+    <meta name="keywords" content="custom furniture Mumbai, real carpentry Mumbai, modular kitchens, space saving furniture, termite proof wardrobes, DreamSpace furniture">
+    <meta name="author" content="DreamSpace Furniture">
+    <meta name="robots" content="index, follow">
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "DreamSpace Furniture",
+      "image": "https://images.unsplash.com/photo-1581141849291-1125c7b692b5?w=1200&fit=crop",
+      "url": "https://www.dreamspacefurniture.in/",
+      "telephone": "+919224576611",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Link Road, Malad West",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400064",
+        "addressCountry": "IN"
+      },
+      "priceRange": "₹₹₹",
+      "description": "Premium custom furniture makers in Mumbai specializing in authentic, durable modular kitchens and space-saving wardrobes."
+    }
+    </script>
+
+    <!-- ========================================== -->
+    <!-- META PIXEL BASE CODE                       -->
+    <!-- ========================================== -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      
+      // Replace with your actual Pixel ID
+      fbq('init', 'YOUR_PIXEL_ID_HERE'); 
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
+
+    <!-- ========================================== -->
+    <!-- FONTS & CSS (Tailwind)                     -->
+    <!-- ========================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#faf8f3',
+                            header: '#38271f',
+                            btn: '#704b32',
+                            btnHover: '#5a3c28',
+                            text: '#30251e',
+                            lightBorder: '#e4d9cb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #faf8f3; color: #30251e; }
+        
+        /* Authentic messy/real workshop hero background */
+        .hero-section {
+            background-image: linear-gradient(rgba(56, 39, 31, 0.75), rgba(56, 39, 31, 0.85)), 
+                              url('https://images.unsplash.com/photo-1581141849291-1125c7b692b5?w=1600&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .modal-overlay { opacity: 0; visibility: hidden; transition: all 0.3s ease; backdrop-filter: blur(5px); }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-content { transform: scale(0.95); transition: transform 0.3s ease; }
+        .modal-overlay.active .modal-content { transform: scale(1); }
+
+        /* Accordion transition */
+        .accordion-content {
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
+        }
+
+        /* Pulse Animation for WhatsApp */
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .whatsapp-float { animation: pulse-green 2s infinite; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-btn selection:text-white">
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/919224576611?text=Hi%20DreamSpace%2C%20I%20am%20looking%20for%20custom%20furniture." 
+       target="_blank" 
+       onclick="trackContact('WhatsApp Float')"
+       class="whatsapp-float fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20bd5a] transition-colors"
+       aria-label="Chat on WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.405 0 0 5.405 0 12.031C0 14.15 0.554 16.143 1.536 17.88L0 24L6.282 22.456C7.962 23.337 9.932 23.856 12.031 23.856C18.656 23.856 24.062 18.45 24.062 11.825C24.062 5.2 18.656 0 12.031 0ZM12.031 21.844C10.155 21.844 8.411 21.328 6.918 20.44L6.471 20.17L2.83 21.135L3.81 17.585L3.513 17.113C2.52 15.617 1.956 13.882 1.956 12.031C1.956 6.476 6.476 1.956 12.031 1.956C17.586 1.956 22.106 6.476 22.106 12.031C22.106 17.586 17.586 21.844 12.031 21.844Z"/></svg>
+    </a>
+
+    <!-- STICKY HEADER -->
+    <header class="fixed w-full top-0 z-40 bg-brand-bg/95 backdrop-blur-md shadow-sm border-b border-brand-lightBorder">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl font-bold text-brand-header tracking-tight">DreamSpace.</a>
+            
+            <nav class="hidden md:flex space-x-8 items-center font-medium text-sm">
+                <a href="#services" class="text-brand-text hover:text-brand-btn transition-colors">Our Work</a>
+                <a href="#process" class="text-brand-text hover:text-brand-btn transition-colors">How It Works</a>
+                <a href="#reviews" class="text-brand-text hover:text-brand-btn transition-colors">Reviews</a>
+                <a href="#faq" class="text-brand-text hover:text-brand-btn transition-colors">FAQ</a>
+                <a href="#contact" class="bg-brand-btn hover:bg-brand-btnHover text-white px-5 py-2.5 rounded shadow transition-colors">Get Free Quote</a>
+            </nav>
+
+            <button class="md:hidden text-brand-header focus:outline-none" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        
+        <div id="mobileMenu" class="hidden md:hidden bg-brand-bg border-t border-brand-lightBorder absolute w-full shadow-xl">
+            <nav class="flex flex-col px-6 py-4 space-y-4 font-medium text-brand-header">
+                <a href="#services" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Our Work</a>
+                <a href="#process" onclick="document.getElementById('mobileMenu').classList.add('hidden')">How It Works</a>
+                <a href="#contact" class="text-brand-btn font-bold" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Get Free Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section min-h-[90svh] flex items-center justify-center text-center px-6 pt-24 pb-12">
+        <div class="max-w-4xl z-10">
+            <span class="inline-block py-1 px-3 rounded bg-brand-header/80 text-white text-sm font-semibold tracking-wider mb-6 border border-brand-btn/50">
+                📍 SERVING MUMBAI & SUBURBS
+            </span>
+            <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl text-white font-bold mb-6 leading-tight drop-shadow-lg">
+                Real Carpentry for <br> <span class="text-[#e4d9cb] italic font-light">Real Mumbai Homes.</span>
+            </h1>
+            <p class="text-white/90 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+                Stop adjusting to readymade furniture. We build custom wardrobes, kitchens, and space-saving solutions tailored exactly to your apartment's floor plan.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" onclick="trackLead('Hero CTA')" class="bg-brand-btn hover:bg-brand-btnHover text-white px-8 py-4 rounded font-bold transition-all shadow-xl text-lg">
+                    Book Free Site Visit
+                </a>
+                <a href="#services" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white/20 px-8 py-4 rounded font-medium transition-all text-lg">
+                    View Real Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="bg-white border-b border-brand-lightBorder py-8 px-6 shadow-sm relative z-20 -mt-2">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-brand-lightBorder">
+            <div class="flex flex-col items-center pt-4 md:pt-0">
+                <svg class="w-10 h-10 text-brand-btn mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <h3 class="font-bold text-brand-header text-lg">Termite-Proof Ply</h3>
+                <p class="text-sm text-brand-text/70 mt-1">100% boiling waterproof marine plywood.</p>
+            </div>
+            <div class="flex flex-col items-center pt-4 md:pt-0">
+                <svg class="w-10 h-10 text-brand-btn mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <h3 class="font-bold text-brand-header text-lg">On-Time Delivery</h3>
+                <p class="text-sm text-brand-text/70 mt-1">Strict 45-day handover guarantee.</p>
+            </div>
+            <div class="flex flex-col items-center pt-4 md:pt-0">
+                <svg class="w-10 h-10 text-brand-btn mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <h3 class="font-bold text-brand-header text-lg">10-Year Warranty</h3>
+                <p class="text-sm text-brand-text/70 mt-1">Complete peace of mind on hardware & wood.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES / REAL GALLERIES -->
+    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-header mb-4">Our Recent Work</h2>
+            <p class="text-brand-text/70 max-w-2xl mx-auto text-lg">No fake 3D renders. Click below to see actual photos of our installations in Mumbai apartments.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Bed -->
+            <div onclick="openGallery('bedroom')" class="group cursor-pointer bg-white rounded shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lightBorder overflow-hidden relative">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1595514535415-eb101e63a3d2?w=600&fit=crop&q=80" loading="lazy" alt="Real Custom Wardrobe" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-brand-header/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center">
+                        <span class="bg-white text-brand-header px-4 py-2 font-bold text-sm rounded">View Gallery</span>
+                    </div>
+                </div>
+                <div class="p-5 text-center bg-white z-10 relative">
+                    <h3 class="font-serif text-xl font-bold mb-1 text-brand-header">Wardrobes & Beds</h3>
+                    <p class="text-sm text-brand-text/70">Floor-to-ceiling storage</p>
+                </div>
+            </div>
+
+            <!-- Living -->
+            <div onclick="openGallery('living')" class="group cursor-pointer bg-white rounded shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lightBorder overflow-hidden relative">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1556020685-e6319336d11f?w=600&fit=crop&q=80" loading="lazy" alt="Living Room Unit Mumbai" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-brand-header/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center">
+                        <span class="bg-white text-brand-header px-4 py-2 font-bold text-sm rounded">View Gallery</span>
+                    </div>
+                </div>
+                <div class="p-5 text-center bg-white z-10 relative">
+                    <h3 class="font-serif text-xl font-bold mb-1 text-brand-header">Living Room Units</h3>
+                    <p class="text-sm text-brand-text/70">TV panels & shoe racks</p>
+                </div>
+            </div>
+
+            <!-- Kitchen -->
+            <div onclick="openGallery('kitchen')" class="group cursor-pointer bg-white rounded shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lightBorder overflow-hidden relative">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=600&fit=crop&q=80" loading="lazy" alt="Modular Kitchen Installation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-brand-header/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center">
+                        <span class="bg-white text-brand-header px-4 py-2 font-bold text-sm rounded">View Gallery</span>
+                    </div>
+                </div>
+                <div class="p-5 text-center bg-white z-10 relative">
+                    <h3 class="font-serif text-xl font-bold mb-1 text-brand-header">Modular Kitchens</h3>
+                    <p class="text-sm text-brand-text/70">Acrylic & Laminate finish</p>
+                </div>
+            </div>
+
+            <!-- Carpentry/Custom -->
+            <div onclick="openGallery('custom')" class="group cursor-pointer bg-white rounded shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lightBorder overflow-hidden relative">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=600&fit=crop&q=80" loading="lazy" alt="Custom Woodworking Mumbai" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-brand-header/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center">
+                        <span class="bg-white text-brand-header px-4 py-2 font-bold text-sm rounded">View Gallery</span>
+                    </div>
+                </div>
+                <div class="p-5 text-center bg-white z-10 relative">
+                    <h3 class="font-serif text-xl font-bold mb-1 text-brand-header">Custom Built</h3>
+                    <p class="text-sm text-brand-text/70">Study tables & Decor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="process" class="py-20 px-6 bg-brand-header text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold mb-4">Our Transparent Process</h2>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">From bare walls to a fully furnished home without the usual carpentry headache.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Connector Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/4 left-[10%] right-[10%] h-[2px] bg-brand-btn/50 -z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-btn border-4 border-brand-header flex items-center justify-center font-bold text-xl mb-4 shadow-lg">1</div>
+                    <h3 class="font-bold text-xl mb-2">Site Visit & Measure</h3>
+                    <p class="text-white/70 text-sm">We visit your home, understand your requirements, and take exact measurements.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-btn border-4 border-brand-header flex items-center justify-center font-bold text-xl mb-4 shadow-lg">2</div>
+                    <h3 class="font-bold text-xl mb-2">Detailed Estimate</h3>
+                    <p class="text-white/70 text-sm">You receive a transparent quote outlining materials, hardware, and exact costs.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-btn border-4 border-brand-header flex items-center justify-center font-bold text-xl mb-4 shadow-lg">3</div>
+                    <h3 class="font-bold text-xl mb-2">Design & Confirm</h3>
+                    <p class="text-white/70 text-sm">We create 2D/3D layouts. Once you approve the designs, manufacturing begins.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-btn border-4 border-brand-header flex items-center justify-center font-bold text-xl mb-4 shadow-lg">4</div>
+                    <h3 class="font-bold text-xl mb-2">Delivery & Setup</h3>
+                    <p class="text-white/70 text-sm">Factory-finished materials arrive and are neatly assembled at your home.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" onclick="trackLead('Process CTA')" class="inline-block bg-white text-brand-header hover:bg-brand-bg px-8 py-4 rounded font-bold transition-all text-lg shadow-lg">Start with Step 1 Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTHENTIC REVIEWS -->
+    <section id="reviews" class="py-20 px-6 bg-white border-y border-brand-lightBorder">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-header text-center mb-16">Stories from Mumbai</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-brand-bg p-8 rounded shadow-sm border border-brand-lightBorder relative">
+                    <div class="text-brand-btn/30 absolute top-4 right-4 text-4xl font-serif">"</div>
+                    <div class="flex text-yellow-500 mb-4 text-lg">★★★★★</div>
+                    <p class="text-brand-text/80 italic mb-6">"Our Kandivali 2BHK had very awkward corners. The DreamSpace team suggested a sliding wardrobe that perfectly fit the alcove. The Hettich channels they used are incredibly smooth. No hidden charges either."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-btn text-white rounded-full flex items-center justify-center font-bold">RP</div>
+                        <div>
+                            <p class="font-bold text-brand-header text-sm">Rahul Parekh</p>
+                            <p class="text-xs text-brand-text/60">Kandivali East</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-brand-bg p-8 rounded shadow-sm border border-brand-lightBorder relative">
+                    <div class="text-brand-btn/30 absolute top-4 right-4 text-4xl font-serif">"</div>
+                    <div class="flex text-yellow-500 mb-4 text-lg">★★★★★</div>
+                    <p class="text-brand-text/80 italic mb-6">"Got amazing 3D designs for my kitchen within 3 days. The final acrylic finish looks exactly like the render. Very professional carpenters who cleaned up every day before leaving."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-btn text-white rounded-full flex items-center justify-center font-bold">SD</div>
+                        <div>
+                            <p class="font-bold text-brand-header text-sm">Sneha Deshmukh</p>
+                            <p class="text-xs text-brand-text/60">Andheri West</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-brand-bg p-8 rounded shadow-sm border border-brand-lightBorder relative">
+                    <div class="text-brand-btn/30 absolute top-4 right-4 text-4xl font-serif">"</div>
+                    <div class="flex text-yellow-500 mb-4 text-lg">★★★★★</div>
+                    <p class="text-brand-text/80 italic mb-6">"Finding honest carpenters in Mumbai is hard. DreamSpace delivered exactly what they promised. The marine ply quality is genuine, and my TV unit was installed in just 2 days. Highly recommended."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-btn text-white rounded-full flex items-center justify-center font-bold">VM</div>
+                        <div>
+                            <p class="font-bold text-brand-header text-sm">Vikram Mehta</p>
+                            <p class="text-xs text-brand-text/60">Malad West</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (Accordion) -->
+    <section id="faq" class="py-20 px-6 max-w-4xl mx-auto">
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-header text-center mb-12">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="border border-brand-lightBorder bg-white rounded-lg overflow-hidden">
+                <button class="w-full px-6 py-4 text-left font-bold text-brand-header flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                    <span>Do you charge for the first site visit?</span>
+                    <svg class="w-5 h-5 transform transition-transform text-brand-btn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-brand-bg">
+                    <div class="px-6 pb-4 pt-2 text-brand-text/80 text-sm leading-relaxed">
+                        No, our initial consultation and site measurement visit within Mumbai limits is completely free of charge. We will take measurements and provide a rough estimate based on your space.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ 2 -->
+            <div class="border border-brand-lightBorder bg-white rounded-lg overflow-hidden">
+                <button class="w-full px-6 py-4 text-left font-bold text-brand-header flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                    <span>How long does the manufacturing process take?</span>
+                    <svg class="w-5 h-5 transform transition-transform text-brand-btn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-brand-bg">
+                    <div class="px-6 pb-4 pt-2 text-brand-text/80 text-sm leading-relaxed">
+                        Once designs are finalized and confirmed, we strictly adhere to a 45-day delivery and installation timeline. Your furniture is pre-built in our workshop to minimize dust and noise at your home.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="border border-brand-lightBorder bg-white rounded-lg overflow-hidden">
+                <button class="w-full px-6 py-4 text-left font-bold text-brand-header flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                    <span>What materials do you use?</span>
+                    <svg class="w-5 h-5 transform transition-transform text-brand-btn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-brand-bg">
+                    <div class="px-6 pb-4 pt-2 text-brand-text/80 text-sm leading-relaxed">
+                        We primarily use BWP (Boiling Water Proof) Marine Plywood for kitchens and bathrooms, and high-quality MR or BWR grade ply for wardrobes. We use branded hardware from Hettich, Blum, or Ebco based on your budget.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD GEN / CONTACT SECTION -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-brand-lightBorder">
+            
+            <!-- Form Area (Google Apps Script Integration) -->
+            <div class="p-10 md:p-12 md:w-3/5">
+                <h3 class="font-serif text-3xl font-bold mb-2 text-brand-header">Let's Discuss Your Home</h3>
+                <p class="text-brand-text/70 text-sm mb-8">Fill the form and get a call from our lead contractor, Surendra, today.</p>
+                
+                <form id="leadForm" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-bold mb-1 text-brand-header">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded bg-brand-bg border border-brand-lightBorder focus:outline-none focus:border-brand-btn focus:ring-1 focus:ring-brand-btn transition-colors" placeholder="e.g. Amit Sharma">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-1 text-brand-header">WhatsApp / Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded bg-brand-bg border border-brand-lightBorder focus:outline-none focus:border-brand-btn focus:ring-1 focus:ring-brand-btn transition-colors" placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-1 text-brand-header">What are you looking for?</label>
+                        <select id="requirement" name="requirement" class="w-full px-4 py-3 rounded bg-brand-bg border border-brand-lightBorder focus:outline-none focus:border-brand-btn focus:ring-1 focus:ring-brand-btn transition-colors">
+                            <option value="Full Home Interior">Full Home Interior</option>
+                            <option value="Modular Kitchen">Modular Kitchen</option>
+                            <option value="Wardrobes / Bedroom">Wardrobes / Bedroom</option>
+                            <option value="Living Room TV Unit">Living Room TV Unit</option>
+                            <option value="Other Custom Furniture">Other Custom Furniture</option>
+                        </select>
+                    </div>
+                    
+                    <div id="formStatus" class="hidden p-4 rounded text-sm font-medium border text-center"></div>
+
+                    <button type="submit" class="w-full bg-brand-btn hover:bg-brand-btnHover text-white font-bold py-4 rounded transition-colors shadow-md text-lg">
+                        <span>Get Free Estimate</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Direct Contact Info -->
+            <div class="bg-brand-header text-white p-10 md:p-12 md:w-2/5 flex flex-col justify-center">
+                <h4 class="font-serif text-2xl font-bold mb-6">Need it faster?</h4>
+                <p class="text-white/80 mb-8 text-sm">Send us photos of your space or a floor plan on WhatsApp for an immediate rough estimate.</p>
+                
+                <a href="https://wa.me/919224576611?text=Hi!%20I%20want%20an%20estimate%20for%20my%20furniture." 
+                   target="_blank"
+                   onclick="trackContact('Contact Section WhatsApp')" 
+                   class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded font-bold transition-colors mb-4">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.405 0 0 5.405 0 12.031C0 14.15 0.554 16.143 1.536 17.88L0 24L6.282 22.456C7.962 23.337 9.932 23.856 12.031 23.856C18.656 23.856 24.062 18.45 24.062 11.825C24.062 5.2 18.656 0 12.031 0ZM12.031 21.844C10.155 21.844 8.411 21.328 6.918 20.44L6.471 20.17L2.83 21.135L3.81 17.585L3.513 17.113C2.52 15.617 1.956 13.882 1.956 12.031C1.956 6.476 6.476 1.956 12.031 1.956C17.586 1.956 22.106 6.476 22.106 12.031C22.106 17.586 17.586 21.844 12.031 21.844Z"/></svg>
+                    Chat on WhatsApp
+                </a>
+                
+                <a href="tel:+919224576611" 
+                   onclick="trackContact('Contact Section Call')"
+                   class="flex items-center justify-center gap-2 bg-transparent border border-brand-btn hover:bg-brand-btnHover text-white py-3 px-4 rounded font-bold transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    +91 92245 76611
+                </a>
+
+                <div class="mt-8 text-white/60 text-xs">
+                    <p>Workshop: Link Road, Malad West, Mumbai - 400064</p>
+                    <p class="mt-1">Mon to Sat, 10 AM to 8 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-header border-t border-brand-header text-white/70 py-8 px-6 text-center text-sm">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-serif text-xl font-bold text-white tracking-tight">DreamSpace.</div>
+            <p>© 2026 DreamSpace Furniture by Surendra. Mumbai's Custom Furniture Experts.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL GALLERY (Real Images) -->
+    <div id="galleryModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-brand-header/90 p-4">
+        <div class="modal-content w-full max-w-5xl bg-brand-bg rounded-lg overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
+            
+            <div class="flex justify-between items-center p-4 border-b border-brand-lightBorder bg-white">
+                <h3 id="modalTitle" class="font-serif text-xl md:text-2xl font-bold text-brand-header">Gallery</h3>
+                <button onclick="closeGallery()" class="text-brand-btn hover:text-brand-header bg-brand-bg p-2 rounded-full transition-colors focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <div id="modalImagesContainer" class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-auto">
+                <!-- Images dynamically injected -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ----------------------------------------------------
+        // Meta Pixel Tracking Helpers
+        // ----------------------------------------------------
+        function trackLead(source = 'Unknown') {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+                console.log('Pixel Tracked: Lead from', source);
+            }
+        }
+
+        function trackContact(method = 'Unknown') {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact');
+                console.log('Pixel Tracked: Contact via', method);
+            }
+        }
+
+        // ----------------------------------------------------
+        // Accordion Logic
+        // ----------------------------------------------------
+        function toggleAccordion(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('svg');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close others
+                document.querySelectorAll('.accordion-content').forEach(el => {
+                    el.style.maxHeight = null;
+                    el.previousElementSibling.querySelector('svg').style.transform = 'rotate(0deg)';
+                });
+                // Open clicked
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // ----------------------------------------------------
+        // Interactive Gallery Logic
+        // ----------------------------------------------------
+        const galleryData = {
+            bedroom: {
+                title: "Wardrobes & Bedroom Finishes",
+                images: [
+                    "https://images.unsplash.com/photo-1595514535415-eb101e63a3d2", 
+                    "https://images.unsplash.com/photo-1583847268964-b28ce8f99283", 
+                    "https://images.unsplash.com/photo-1505693314120-0d443867891c"  
+                ]
+            },
+            living: {
+                title: "Living Room TV Units",
+                images: [
+                    "https://images.unsplash.com/photo-1556020685-e6319336d11f", 
+                    "https://images.unsplash.com/photo-1600607686527-6fb886090705", 
+                    "https://images.unsplash.com/photo-1560185127-6ed189bf02f4"  
+                ]
+            },
+            kitchen: {
+                title: "Modular Kitchen Installations",
+                images: [
+                    "https://images.unsplash.com/photo-1556909212-d5b604d0c90d", 
+                    "https://images.unsplash.com/photo-1556910103-1c02745a872f", 
+                    "https://images.unsplash.com/photo-1588854337115-1c67d9247e0d"  
+                ]
+            },
+            custom: {
+                title: "Carpentry & Custom Pieces",
+                images: [
+                    "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc", 
+                    "https://images.unsplash.com/photo-1581141849291-1125c7b692b5", 
+                    "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7"  
+                ]
+            }
+        };
+
+        const modal = document.getElementById('galleryModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalImages = document.getElementById('modalImagesContainer');
+
+        function openGallery(category) {
+            const data = galleryData[category];
+            modalTitle.textContent = data.title;
+            
+            modalImages.innerHTML = data.images.map(url => `
+                <div class="h-64 rounded bg-brand-lightBorder overflow-hidden">
+                    <img src="${url}?w=600&fit=crop&q=80" alt="Furniture photo" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            `).join('');
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => modalImages.innerHTML = '', 300);
+        }
+
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeGallery(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeGallery(); });
+
+        // ----------------------------------------------------
+        // Form Submission (Google Apps Script Integration)
+        // ----------------------------------------------------
+        // Replace this URL with your deployed Google Apps Script Web App URL
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const btn = form.querySelector('button');
+            const btnText = btn.querySelector('span');
+            const status = document.getElementById('formStatus');
+            
+            // Fire Lead Event for Meta Pixel
+            trackLead('Contact Form');
+
+            // Gather Data
+            const formData = new FormData(form);
+
+            // UI Loading state
+            btn.disabled = true;
+            btnText.textContent = 'Submitting...';
+            btn.classList.add('opacity-75');
+            status.classList.add('hidden');
+
+            // Send to Google Sheets via fetch
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                // Success Handling
+                btn.disabled = false;
+                btnText.textContent = 'Get Free Estimate';
+                btn.classList.remove('opacity-75');
+                
+                status.classList.remove('hidden');
+                status.classList.add('bg-green-100', 'text-green-800', 'border-green-300');
+                status.textContent = 'Thank you! Our designer will contact you shortly.';
+                
+                form.reset(); 
+                setTimeout(() => status.classList.add('hidden'), 5000);
+            })
+            .catch(error => {
+                // Error Handling
+                btn.disabled = false;
+                btnText.textContent = 'Get Free Estimate';
+                btn.classList.remove('opacity-75');
+                
+                status.classList.remove('hidden');
+                status.classList.add('bg-red-100', 'text-red-800', 'border-red-300');
+                status.textContent = 'Oops! Something went wrong. Please use WhatsApp instead.';
+                console.error('Error!', error.message);
+            });
+        });
+    </script>
+</body>
+</html>
